@@ -1,7 +1,7 @@
-const express = require("express"),
-    path = require("path"),
-    app = express(),
-    puerto = 3000;
+const express = require("express");
+const path = require("path");
+const app = express();
+const port = process.env.PORT || 3000;
 
 app.get('/', (peticion, respuesta) => {
     // Podemos acceder a la petición HTTP
@@ -23,12 +23,12 @@ app.get('/hola', (peticion, respuesta) => {
 });
 
 // Una vez definidas nuestras rutas podemos iniciar el servidor
-app.listen(puerto, err => {
+app.listen(port, err => {
     if (err) {
         // Aquí manejar el error
         console.error("Error escuchando: ", err);
         return;
     }
     // Si no se detuvo arriba con el return, entonces todo va bien ;)
-    console.log(`Escuchando en el puerto :${puerto}`);
+    console.log(`Escuchando en el port :${port}`);
 });
