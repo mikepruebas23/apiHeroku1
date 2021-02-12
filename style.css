@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
@@ -7,7 +7,7 @@ body{
     height: 660px;
 }
 .contenedor{
-    /* text-align: center; */
+   
     width: 50%;
     height: 100%;
     margin: 0 auto;
@@ -55,7 +55,7 @@ a {
     text-decoration: none;
 }
 .footer{
-    /* width: %; */
+    
     background-color: #232323;
     color: white;
     margin: 0 auto;
@@ -63,5 +63,5 @@ a {
     padding: 10px;
     height: 47px;
     text-align: center;
-    /* border-radius: 2px; */
-}
+   
+} */
