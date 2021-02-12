@@ -16,7 +16,7 @@ app.get('/pagina', (peticion, respuesta) =>{
 app.get('/hola',(peticion,respuesta)=>{
     let mascota = {
         nombre: "Miguel Armenta",
-        apellido: "Armenta Acosta"
+        apellido: "Armenta Acosta",
         edad: 26,
         
     };
