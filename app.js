@@ -3,23 +3,28 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get('/', (peticion, respuesta) => {
-    // Podemos acceder a la petición HTTP
-    let agenteDeUsuario = peticion.header("user-agent");
-    respuesta.send("La ruta / solicitada con: " + agenteDeUsuario);
+app.get('/', (req, res) => {
+
+    // let agenteDeUsuario = peticion.header("user-agent");
+    // res.send("La ruta / solicitada con: " + agenteDeUsuario);
+    res.status(200).redirect("https://apiexpresheroku1.herokuapp.com/pagina")
 });
-app.get('/pagina', (peticion, respuesta) => {
+app.get('/pagina', (req, res) => {
     // Servir archivo HTML, o cualquier otro archivo
     let rutaDeArchivo = path.join(__dirname, "plantilla.html");
-    respuesta.sendFile(rutaDeArchivo);
+    res.sendFile(rutaDeArchivo);
 });
 
-app.get('/hola', (peticion, respuesta) => {
+app.get('/usuario', (req, res) => {
     let mascota = {
-        nombre: "Miguel Angel",
-        edad: 26,
+        Id: 1,
+        Nombre: "Miguel Angel",
+        Apellido: "Armenta Acosta",
+        Edad: 26,
+        Lenguajes: "Wix",
+        Especialidad: "Front-End"
     };
-    respuesta.json(mascota);
+    res.json(mascota);
 });
 
 // Una vez definidas nuestras rutas podemos iniciar el servidor
