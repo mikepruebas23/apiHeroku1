@@ -1,15 +1,19 @@
 {
-  "name": "api-express-1",
-  "version": "1.0.0",
-  "description": "ejemplo de una api para subir a heroku",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "name": "coolnodeapp",
+    "version": "1.0.0",
+    "description": "node app ",
+    "main": "app.js",
+    "scripts": {
+    "start": "node app.js"
   },
-  "start": "node app.js",
-  "author": "Miguel Armenta",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
+    "repository": {
+    "type": "git",
+    "url": ""
+  },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+    "url": ""
+  },
+    "homepage": ""
   }
-}
