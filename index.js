@@ -16,7 +16,9 @@ app.get('/pagina', (peticion, respuesta) =>{
 app.get('/hola',(peticion,respuesta)=>{
     let mascota = {
         nombre: "Miguel Armenta",
-        edad: 26
+        apellido: "Armenta Acosta"
+        edad: 26,
+        
     };
 
     respuesta.json(mascota);
